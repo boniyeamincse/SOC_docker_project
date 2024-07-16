@@ -1,0 +1,43 @@
+
+version: '3.7'
+
+services:
+  opensearch:
+    image: opensearchproject/opensearch:latest
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+  wazuh-indexer:
+    image: wazuh/wazuh-indexer:latest
+    container_name: wazuh-indexer
+    ports:
+      - "9201:9200"
+    volumes:
+      - wazuh-indexer-data:/usr/share/opensearch/data
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - prometheus-data:/prometheus
+
+volumes:
+  opensearch-data:
+  wazuh-indexer-data:
+  grafana-data:
+  prometheus-data:

@@ -1,0 +1,9 @@
+database:
+  host: iris-db.example.com
+  port: 5432
+  user: iris_user
+  password: iris_password
+api:
+  endpoint: http://iris.example.com/api
+  key: YOUR_IRIS_API_KEY
+

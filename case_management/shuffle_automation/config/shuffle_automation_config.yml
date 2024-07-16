@@ -1,0 +1,4 @@
+
+api:
+  endpoint: http://shuffle.example.com/api
+  key: YOUR_SHUFFLE_API_KEY

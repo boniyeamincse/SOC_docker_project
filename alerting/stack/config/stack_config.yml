@@ -1,0 +1,3 @@
+
+stack_endpoint: http://stack-service.example.com
+api_key: YOUR_STACK_API_KEY

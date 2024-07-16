@@ -1,0 +1,7 @@
+
+smtp_server: smtp.example.com
+smtp_port: 587
+username: your-email@example.com
+password: your-email-password
+from: no-reply@example.com
+to: soc-team@example.com

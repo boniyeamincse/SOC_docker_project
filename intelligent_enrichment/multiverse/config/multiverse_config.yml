@@ -1,0 +1,4 @@
+
+multiverse:
+  endpoint: http://multiverse.example.com
+  api_key: YOUR_MULTIVERSE_API_KEY
